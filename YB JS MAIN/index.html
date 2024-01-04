@@ -1,0 +1,1710 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  
+    <script>
+      document.write("Hello World <br>"); // Helps you write in HTML and is shown in Web Browser page.
+      document.write("<i>Hello World</i>"); // Also you can put any html tags inside "" with document.write
+
+      /* It is used for multi line comment, it is differnt from // single line comments */
+
+      //Varaible Declaration
+
+      var x = "Variable Declaration";
+      var z = "Another Variable Declaration";
+
+      document.write(x);
+      document.write(z);
+
+      //Multiple Vraiable Declaration
+
+      var first, second;
+
+      first = "Multiple";
+      second = "Variable Declaration";
+
+      document.write(first);
+      document.write(second);
+
+      //Differnece between let and var = We cannot declare let again. Value can be overriden but declaration not.
+      //Const variable given value once cannot be changed again at all.
+      //Var= value, declaration works
+      //Let= value works, declaration does not.
+      //Const= value, declaration both doesn't work.
+
+      // Data Types in Javascript
+
+      var x = "Hello World"; // String type
+      var x = 25; //Number
+      var x = true; //Boolean type
+      var x = ["HTML", "CSS", "JS"]; // Array type data
+      var x = { first: "Jane", last: "Doe" }; //Object
+      var x = null; //Null type Data
+      var x; //Undefined data type
+
+      document.write("<br>");
+      document.write("Below line?");
+      document.write("<br>");
+      var y = "Checking data types";
+      document.write(typeof y);
+      y = 77;
+      document.write("<br>");
+      document.write(typeof y);
+      document.write("<br>");
+      y = false;
+      y = true;
+      document.write(typeof y);
+
+      document.write("<br>");
+      y = undefined;
+      var z;
+      document.write(typeof y);
+      document.write(typeof z);
+      document.write("<br>");
+
+      x = ["HTML", "CSS", "JS"];
+      document.write(x);
+      document.write("<br>");
+      document.write(typeof x);
+
+      document.write("<br>");
+      x = {
+        name: "Tommy Fury", // Value of both array and object data type is Object in Javascript.
+        country: "India",
+      };
+
+      document.write(x);
+      document.write("<br>");
+      document.write(typeof x);
+      document.write("<br>");
+
+      //Arithmetic Operators in Javascript
+
+      var a = 7;
+      var b = 4;
+      var c = a * b;
+      document.write(c);
+      document.write("<br>");
+      var c = a + b;
+      document.write(c);
+      document.write("<br>");
+
+      // Exponential Operator
+
+      var c = a ** b;
+      document.write(c);
+      document.write("<br>");
+
+      // Increment and Decrement operators
+
+      var a = 10;
+      var b = 4;
+      var c = a + b;
+      document.write(c);
+      document.write("<br>");
+      a++;
+      var c = a + b;
+      document.write(c);
+      document.write("<br>");
+      console.log(c); // shown on console window in chrom inspect option.
+
+      // Javascript follows BODMAS rules for arithemtic operators.
+
+      // Assignment operators works In JS too
+      // x+=y --> x = x + y so on and so fourth for all other assignment operators.
+
+      console.time("Test");
+      console.log([1, 2, 3, 4, 5]);
+      console.table([1, 2, 3, 4, 5]);
+      console.error("Something Went Wrong");
+      console.warn("This is a Warning Message");
+      console.warn("This is a Warning Message");
+      console.warn("This is a Warning Message");
+      console.warn("This is a Warning Message");
+      console.timeEnd("Test");
+
+      // console.clear() it clears the entire console with a message that Console is cleared.
+
+      // You can write and execute javascript command in console center in browser too.
+
+      /* Comparison operators in javascript -->
+
+            == --> Equal to
+            === --> Equal value and equal data type
+            != --> Not equal
+            !== --> Not equal not equal data type
+            > --> greater than
+            < --> less than
+            >= --> Greater than or equal to
+            <= --> less than or equal to  
+      */
+
+      document.write("<br>");
+
+      var n = 10;
+      var m = 20;
+      console.log(x == y); //every comparison operator can only have two values either true or  false.
+
+      // IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT IMPORTANT
+
+      // If Else statements
+
+      var e = 14;
+      if (e > 12) {
+        document.write("e is greater than 12");
+        console.log("e is greater than 12");
+      } else {
+        document.write("e is not greater than 12");
+        console.log("e is not greater than 12");
+      }
+
+      document.write("<br>");
+
+      // LOGICAL OPEARTORS   LOGICAL OPEARTORS    LOGICAL OPEARTORS   LOGICAL OPEARTORS
+
+      /* Logical AND (&&)  Both Conditions have to be true for the statement to be executed.
+
+       Logical OR (||)  Only 1 condition needs to be true in order for the statement to be executed. If both are false then        statement will not execute. Both True, 1 true that's all.
+
+       Logical NOT (!!) Result will be in reverse order, True will become False and vice-versa */
+
+      // They are mostly used for comparison in if and else statements.
+
+      var age = 20;
+      if (age >= 18 && age <= 21) {
+        document.write("Yes, You are eligible");
+        console.log("Yes You are eligible");
+      } else {
+        document.write("You are not eligible");
+      }
+
+      document.write("<br>");
+
+      var age = 20;
+      if (age >= 18 || age <= 19) {
+        document.write("Yes, You are eligible");
+        console.log("Yes You are eligible");
+      } else {
+        document.write("You are not eligible");
+      }
+
+      document.write("<br>");
+
+      var a = 5;
+      var b = 7;
+
+      if (a > b) {
+        document.write("5 is greater than 7");
+      } else {
+        document.write("5 is not greater than 7");
+        console.log("% is not greater than 7");
+      }
+
+      // If else statements again, when the first condition is not satisfied (if), the second condition executes(else)
+      //However, there is one more condition called else if which we will look ahead further.
+
+      document.write("<br>");
+
+      var x = 15;
+
+      if (x > 30) {
+        document.write("X is greater");
+        console.log("X is greater");
+      } else {
+        document.write("X is not greater");
+        console.log("X is not greater");
+      }
+
+      document.write("<br>");
+
+      // Concatination and integration with if else statements.
+      // + sign is used for concatination with other elements
+
+      var name = "Gitanjali Soni";
+      var gender = "Female";
+
+      if (gender == "Female") {
+        document.write("Hello Miss." + name);
+        console.log("Hello Miss." + name);
+      } else {
+        document.write("Hello Mr." + name);
+      }
+
+      // Else If Conditions
+
+      document.write("<br>");
+
+      var time = 18;
+
+      if(time < 10 ){
+        document.write("Good Morning");
+      } else if( time < 20){
+        document.write("Good Day");
+        console.log("Good Day");  
+      }else{
+        document.write("Good Evening");
+      }
+
+      document.write("<br>");
+
+      // Another Example
+      
+      var lastname = "Soni";
+
+      if (lastname == "Soni"){
+        document.write("Hii Gitanjali " + lastname);
+        console.log("Hii Gitanjali " + lastname);
+      }else if( lastname = "Satoru"){
+        document.write("Hi Gojo" + lastname);
+      }else{
+        document.write("Do Nothing and print no lastname");
+      }
+    
+      document.write("<br>");
+
+      // Else if statements 
+
+      var per = 95;
+
+      if(per >= 80 && per <= 100){
+        document.write("First Grade");
+      }else if(per >= 60 && per <= 80){
+        document.write("Second Grade");
+      }else if (per >= 45 && per <= 60){
+        document.write("You are in merit");
+      }else if (per >= 33 && per <= 45){
+        document.write("You Just passed");
+      } else{
+        document.write("You failed");
+      }
+
+      //bit of recap
+      document.write("<br>");
+      var day = "monday";
+      if(day == "mondayy"){
+        document.write("Today is Mon");
+      } else{
+        document.write("today is not monday");
+      }
+
+    var year = 20;
+
+    if(year >= 18 && year <= 21){
+      console.log("Yes You are eligible for the course");
+    }
+      
+
+    // TERNARY OPERATOR
+
+    var a = 100;
+    var b;
+    (a == 100)? b = "True" : b = "False";
+    console.log(b);
+    //another way of writing the above statement
+
+    b = "Value is " + (a == 100? "True" : "False");
+    console.log(b);
+
+    document.write("<br>");
+
+    //SWITCH CASE --> they just work like if-else statements but with different format and use case.
+    
+    var day = 1;
+
+    switch (day) {
+      case 0:
+        document.write("Today is Monday");
+      break;
+
+      case 1:
+      document.write("Today is Tuesday");
+      break;
+
+      case 2:
+      document.write("Today is Wednesday");
+      break;
+
+      case 3:
+      document.write("Today is Thursday");
+      break;
+
+      case 4:
+      document.write("Today is Friday");
+      break;
+
+      case 5:
+      document.write("Today is Saturday");
+      break;
+
+      case 6:
+      document.write("Today is Sunday");
+      break;
+
+      default: document.write("Please Enter a Valid Date");
+    }
+
+    // ALERT BOX --> it can show an alert as a popup on the screen
+
+    // var a = 10;
+    // var b = 20;
+
+    // if(a > b){
+    //   alert("a is greater than b");
+    // }else{
+    //   alert("a is not greater than b")
+    // }
+
+    // // having two of alert one after the other show them 1 after another and you have to click both of them.
+
+    // var c = 25;
+    // var d = 30;
+
+    // if (c > d){
+    //   alert("c is greater than d");
+    // }else{
+    //   alert("c is smaller than d");
+    // }
+
+    // // CONFIRM BOX
+    
+    // var a = confirm("Do you like our Content?");  //we load this with an event like button or an action.
+
+    // if(a){
+    //   alert("Thank You");
+    // }else{
+    //   alert("Extremely Sorry");
+    // }
+
+    // // PROPMT BOX --> Takes user input.
+
+    // var a = prompt("Enter your Username");
+
+    // alert("Welcome " + a);
+
+    // //
+
+    // document.write("<br>");
+
+
+    // var per = prompt("Enter your percentage ");
+
+    // if(per >= 80 && per <= 100){
+    //   document.write("First Grade");
+    // }else if(per >= 60 && per <= 80){
+    //   document.write("Second Grade");
+    // }else if (per >= 45 && per <= 60){
+    //   document.write("You are in merit");
+    // }else if (per >= 33 && per <= 45){
+    //   document.write("You Just passed");
+    // } else{
+    //   document.write("You failed");
+    //} // will show on the html page
+    
+    document.write("<br>");
+
+
+
+    //FUNCTIONS **IMPORTANT**
+
+      function hello(){
+        document.write("Hello Everybody, testing function");    //funtion declaration
+      } 
+
+
+      hello();   // Calling Function or function call
+
+      //FUNCTION WITH PARAMETERS --> they can change the value of the variable or input
+
+      function sum (a,b){        // a and b are parameters
+        document.write(a + b);
+      }
+
+      a = 15;     //aruguemnt 1
+      b = 20;     //arguement 2
+
+      sum(a,b); 
+
+      document.write("<br>");
+
+      sum(35,20);
+      sum(10,10);
+
+      document.write("<br>");
+
+      function jen (fname = "Gitanjali", lname = "Soni"){
+        document.write("Hello " + fname + " " + lname);
+      }
+
+      jen(); 
+      document.write("<br>");
+      jen("Snehil","Maurya");
+      
+
+      document.write("<br>");
+
+
+      // FUNCTION WITH RETURN VALUE
+
+      function fullname(fname,lname){
+        var a = fname + " " + lname;
+        return a;
+      }
+
+      var fn = fullname("steve","harrington");
+      document.write(fn);
+
+      document.write("<br>");
+
+      function marks(math,eng,sc){
+        var s = math + eng + sc;
+        return s;
+      }
+
+      var n = marks(55,90,85);
+      document.write(n);
+
+        //another way to write the same function
+
+        document.write("<br>");
+
+        function number(math,eng,sc){
+          document.write(math + eng + sc);
+        }
+
+        number(55,90,85);
+
+        document.write("<br>");
+        
+
+        //example
+
+        function marks(math,eng,sc){
+        var s = math + eng + sc;
+        return s;
+      }
+
+        function percentage(tt){
+          var per = tt/300 * 100;
+          document.write(per);
+        }
+
+        var total = marks(55,32,45);
+        percentage(total);
+
+
+        //  ARROW FUNCTION 
+
+          function sum (a,b) {       //Normal function
+            return a + b;
+          }
+
+          let sum2 = (a,b) => {
+            return a + b;           // Arrow function
+          }
+
+        //OR more consice way of writing the same function
+
+          let sum3 = (a,b) => a + b;  // we dont have to type return a+b as it assumes that it is returning.
+
+          // example
+
+          document.write("<br>");
+
+          function isPositive(number){
+            return 3 + number;                   //Normal function
+          }
+
+          let isPositive2 = number => number >= 0;  //Arrow Function, we can remove the () too for single perimeter.
+
+          //example 
+
+          var aa = isPositive(3);
+          document.write(aa);
+
+          document.write("<br>");
+
+          var ans = isPositive2(2);
+          document.write(ans);
+
+
+        // EVENTS **MOST IMPORTANT**
+
+        function button (){
+          document.write("Hello Everyone, Testing button");
+        }
+
+        const button2 = () => {
+          alert("Checking button, again.")
+        }
+        
+        document.write("<br>");
+
+
+
+        // LOOPS **IMPORTANT**
+
+        //WHILE LOOP
+
+        var a = 1;  //initialization
+
+        while(a <= 10){
+          document.write(a + ") Checking While Loop <br>");
+          a = a + 1;
+        }
+
+        document.write("<br>");
+
+        var b = 10;
+
+        while(b >= 1){
+          document.write(b + ") Checking reverse while loop <br>");
+          b = b - 1;
+        }
+        
+        document.write("<br>");
+
+        // DO WHILE LOOP 
+
+
+        // the only differmece between while and do while is that do while doesnt check the 1st initalized condition
+        // it directly goes to the increment/decrement and checks the condition after the first increment/dec.
+        // While loop checks the conditions first then increment/decrement.
+
+
+        var c = 1;
+
+        do{                       //goes inside the loop first, prints it and then check the while condition.
+          document.write( c + ") Checking do while loop <br>"); 
+          c++;     
+        }while(c <= 10)
+
+        
+        document.write("<br>");
+
+        //FOR LOOP **MOST IMPORTANT**
+
+        //for loop is the most popularly used loop by developers
+
+        for(var d = 1; d <=10; d++){
+          document.write("checking for loop <br>");
+        }
+
+        document.write("<br>");
+
+        //BREAK AND CONTINUE STATEMENTS -> used with loops only
+
+        for(var e = 1; e <= 10; e++){
+        if(e == 4){
+          document.write( e + ") Hey Break and continue statements <br>");
+          continue;  // no repetition of e==4. If used break here the loop will break and will not print further
+        }
+          document.write( e + ") Hello Break and continue statements <br>");
+        }
+
+        document.write("<br>");
+
+        // Even/Odd numbers with loop
+
+        for(var a = 1; a <= 20; a++){
+          if( a % 2 == 0){             //for odd we use (a % 2 != 0)
+            document.write(a + "<br>")
+          }
+        }
+
+        //Nested Loops
+
+        for(var a = 1; a <= 100; a = a + 10){
+          for(b = a ; b < a + 10; b++){
+            document.write(b + " ");
+          }
+          document.write("<br>");   //SOLVE MORE EXAMPLES FOR BETTER UNDERSTANDING
+        }
+
+
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+
+
+
+
+
+
+
+
+
+
+
+        //ARRAYS  **MOST IMPORTANT**
+        //ARRAYS  **MOST IMPORTANT**
+        //ARRAYS  **MOST IMPORTANT**
+        //ARRAYS  **MOST IMPORTANT**
+        //ARRAYS  **MOST IMPORTANT**
+
+
+
+
+
+
+
+
+        // arrays are represented with [], we put the values inside it. The indexing starts from 0.
+
+        var arr = [10,20,30,40,50];
+
+        document.write(arr)
+
+        document.write("<br>");
+
+
+
+        var ary = [10,20,30,40,50];
+
+        for(var a = 0; a <= 4; a++){
+          document.write(ary[a] + ",");
+          
+          }
+
+
+          document.write("<br>");
+
+
+          //CONSTRUCTOR METHOD TO CREATE AN ARRAY
+
+
+
+          var ar = new Array();     // () means unlimited amount of values can be put inside array.
+                                    // (4) meas only 4 values can be used inside the array.
+
+          ar[0] = 10;
+          ar[1] = "Gitanjali"
+          ar[2] = true;
+
+          document.write(ar);
+
+          document.write("<br>");
+
+
+          // Array using user input as prompt
+
+
+          // var ara = new Array(2);
+
+          // for(g = 0; g < 3; g++){
+          //   ara[g] = prompt("Enter The Value: "); //COMMENTED DUE TO PROMPT POPUP
+          //   document.write(ara[g] + "<br>");
+          // }
+        
+          document.write("<br>");
+
+
+          // Example
+
+          var arr1 = new Array();
+
+          arr1[0] = 10;
+          arr1[1] = "Harshit";
+          arr1[3] = true;
+
+          for(a = 0; a < 5; a++){
+            document.write(arr1[a] + "<br>");
+          }
+
+          document.write("<br>");
+
+          //MULTIDIMENSIONAL ARRAYS -> used for related data
+          // 2D ARRAYS
+
+          var ary1 = [
+            ["Shresth", 18, "Male", "12th"],
+            ["Harshit", 22, "Male", "BA"],
+            ["Davsihman", 23, "Female", "MBA"],
+            ["Debrupa", 25, "Female", "BBA"]
+          ];
+
+
+          document.write(ary1.length);  //array.length is used to count the length of the array and used in loops too.
+          document.write("<table border='1px' cellspacing='0'>");
+          for(var a = 0; a < ary1.length; a++){
+            document.write("<tr>")
+            for(var b = 0; b < ary1[a].length; b++){
+              document.write("<td>" + ary1[a][b] + "</td>");
+            }
+            document.write("<br>");
+          }
+          document.write("</table>");
+        
+          
+          document.write("<br>");
+
+
+
+          // MODIFY AND DELETE ARRAY ELEMENTS
+
+
+
+          var arr2 = ["Davish", 19, "MBA", true];
+
+          document.write(arr2 + "<br>");
+
+          arr2[2] = "M.Tech";               //value changed.
+          arr2[1] = 20;
+ 
+          document.write(arr2);
+
+          document.write("<br>");
+
+          delete arr2[3];            //value deleted. it is a pre-defined function provided by javascript.
+
+          document.write(arr2);
+
+
+          //ARRAY SORT AND REVERSE -> **IMPORTANT**
+
+          // List of all ARRAY METHODS :
+
+          // sort()
+          // reverse()
+          // pop()
+          // push()
+          // shift()
+          // unshift()
+          // concat()
+          // join()
+          // slice()
+          // splice()
+          // isArray()
+          // indexOf()
+          // lastindexOf()
+          // entries()
+          // every()
+          // filter()
+          // find()
+          // findIndex()
+          // includes()
+          // some()
+          // forEach()
+          // toString()
+          // valueOf()
+          // fill()
+
+          document.write("<br>");
+          document.write("<br>");
+
+
+          // 1. SORT
+
+          var a = ["Sanjay", "Aman", "Rehman", "Karan"];
+          document.write(a);
+          document.write("<br>");
+
+
+          a.sort();              //sorted according to alphabetical order.
+          document.write(a);
+
+
+          document.write("<br>");
+
+          a.reverse();          // reverses the array
+          document.write(a); 
+
+
+          document.write("<br>");
+          document.write("<br>");
+          document.write("<br>");
+
+
+
+          // 2. Reverse
+
+          var b = ["Sanjay", "Aman", "Rehman", "Karan"];
+          document.write(b);
+          document.write("<br>");
+
+          b.reverse();
+          document.write(b);
+
+          document.write("<br>");
+          document.write("<br>");
+          document.write("<br>");
+          document.write("<br>");
+
+
+
+
+
+          // 3. POP/PUSH
+
+          //pop will delete the last item of an array.
+          //push will add item to the last place in an existing array.
+
+          var a = ["Sanjay", "Aman", "Rehman", "Karan"];
+          document.write(a);
+
+          document.write("<br>");
+
+          a.pop();   //deletd the last value;
+
+          document.write(a);
+
+          document.write("<br>");
+
+          var a = ["Sanjay", "Aman", "Rehman", "Karan"];
+
+          a.push("Harshit");  //added to the last place in array.
+          document.write(a);
+
+          document.write("<br>");
+          document.write("<br>");
+          document.write("<br>");
+
+
+
+
+          // SHIFT AND UNSHIFT
+
+
+
+          // Shift -> Shift is just opposite of pop, insted of deleting the items from last place, shift deletes the items from the first place of the array. deletes in 1st index
+
+          // Unshift -> Unshift function is also just opposite of the push function. Instead of adding items in the last place of the array. Unshift adds the item to the first place of the array. adds in 1st index
+
+
+          var a = ["Sanjay", "Aman", "Rehman", "Karan"];
+          a.shift();
+          document.write(a);
+
+          document.write("<br>");
+          document.write("<br>");
+
+
+          var a = ["Sanjay", "Aman", "Rehman", "Karan"];
+          a.unshift("Harshit");
+          document.write(a);
+
+          document.write("<br>");
+          document.write("<br>");
+
+
+          // CONCAT AND JOIN
+
+
+          // Concat means adding two arrays.
+
+          //1. Concat ->
+
+
+          var a = ["Sanjay", "Aman", "Rehman", "Karan"];
+          var b = a.concat("Harshit, Rahul");
+          document.write(b);
+          
+          document.write("<br>");
+
+          //another way of doing it
+
+          var a = ["Sanjay", "Aman", "Rehman", "Karan"];
+          var b = ["Harshit", "Shresth", "Davishmaan"];
+          var d = ["Neha", "Jethwani"];
+          var c = a.concat(b,d);
+          document.write(c);
+
+          document.write("<br>");
+          document.write("<br>");
+
+          //2. Join -> it can make an array a string
+
+
+          var a = ["Sanjay", "Aman", "Rehman", "Karan"];
+          var b = ["Harshit", "Shresth", "Davishmaan"];
+          var d = ["Neha", "Jethwani"];
+          var c = a.concat(b,d);
+          
+          var d = c.join(" ");   //removed the commas and created a string of all array items.
+          document.write(d);
+
+          document.write("<br>");
+          document.write("<br>");
+
+
+          // Slice And Splice
+
+          // Slice -> Slice can remove one or more values/items from an existing array. You have to give two parameters "Start index and End index". Slice(start,end)
+
+
+          var a = ["0Sanjay", "1Aman", "2Rehman", "3Karan", "4Harshit", "5Shresth"];
+          document.write(a + "<br><br>");
+
+          var b = a.slice(1,4);   //end index should be the one till you want. write 4 then you will get value till 3. Negative values can also be given to reverse the array.
+          document.write(b);
+
+
+          //Splice -> Splice is used to add items/values inside/between an existing array. In splice we have to add 3 parameters. -> splice(index,(optional)howmany,"new value", Delete)
+
+          var a = ["0Sanjay", "1Aman", "2Rehman", "3Karan"];
+          document.write(a + "<br><br>");
+
+          a.splice(2,0,"Neha", "Gitanjali");
+          document.write(a + "<br><br>");
+
+          //if u want to delete the existing item and then add thses values ->
+
+
+          var a = ["0Sanjay", "1Aman", "2Rehman", "3Karan"];
+          document.write(a + "<br><br>");
+
+          a.splice(2,1,"Neha","Gitanjali");  //due to addition of 1 rehman would be deleted
+          document.write(a + "<br><br>");
+
+
+          //isArray -> it used to check if a declared variable is an array or not.
+          
+          var a = ["Sanjay", "Aman", "Rehman", "Karan"];
+          document.write(a + "<br><br>");
+
+          var b = Array.isArray(a);
+          document.write(b);
+
+
+          document.write("<br><br>");
+
+          var a = 20;
+          var b = Array.isArray(a);
+          document.write(b + "<br><br>");
+
+          //example
+
+          var a = ["Sanjay", "Aman", "Rehman", "Karan"];
+          // var a = 20;
+
+          if(Array.isArray(a)){
+            document.write("This is an array");
+          } else{
+            document.write("This is not an array");
+          }
+
+
+          document.write("<br><br>");
+
+          
+          // indexOf() -> is used to find/check if an element exist in an array and its index number. It has two parameters, 1st is indexOf("Search Item", Start);
+          // if it doesnt find the specified element in the array it will return -1. Meaing the elemnt does not exist in the array.
+
+
+          var a = ["Sanjay", "Aman", "Rehman", "Karan", "Aman"];
+          document.write(a + "<br><br>");
+
+          var b = a.indexOf("Aman");
+          document.write(b);
+
+          document.write("<br><br>");
+
+          var c = a.indexOf("Aman",2);    // it will start looking from index value 2 and afterwards.
+          document.write(c);
+
+          document.write("<br><br>");
+
+          //lastIndexOf() -> it works exactly like indexOf but it starts from the last position, not from the start of he index
+
+          var d = a.lastIndexOf("Aman");
+          document.write(d); // they will give the index value only.
+
+
+          document.write("<br><br>");
+          document.write("<br><br>");
+          document.write("<br><br>");
+
+          //includes() -> used to search whether an item in array exists or not. Gives True/False values only.
+
+          var a = ["Sanjay", "Aman", "Rehman", "Karan", "Aman"];
+          document.write(a + "<br><br>");
+
+          var b = a.includes("Karan");
+          document.write(b);
+
+          document.write("<br><br>");
+
+
+          //some() & every()
+
+          //some() checks if any of the elements of an array passes a given test. true/false
+
+          var ages = [ 10, 13, 18, 20];
+          document.write(ages + "<br><br>");
+
+          // function checkAdults(age){
+          //   return age >= 18;
+          // }
+
+          var checkAdults = (age) => {          //arrow function
+            return age >= 18;
+          }
+
+          
+          var b = ages.some(checkAdults);
+          document.write(b);
+          document.write("<br>")
+          document.write("<br>")
+
+          //every() -> for every to be true, each of the array elements have to pass the test case else it will not return true.
+
+
+          var ages = [ 10, 13, 18, 20];
+          document.write(ages + "<br><br>");
+
+          var checkAdults = (age) => {          //arrow function
+            return age >= 18;
+          }
+
+          var b = ages.every(checkAdults);
+          document.write(b);
+
+          var ages = [ 10, 13, 18, 20];
+          document.write(ages + "<br><br>");
+
+          // function checkAdults(age){
+          //   return age >= 18;
+          // }
+
+          var checkAdults = (age) => {          //arrow function
+            return age >= 18;
+          }
+
+          
+          var b = ages.some(checkAdults);
+          document.write(b);
+
+          document.write("<br>")
+          document.write("<br>")
+
+
+
+          // find() and findIndex()
+
+          //find(Function Name) -> method returns the value of the first element in an array that passes the test.
+          //findIndex() -> method returns the index of the first element in an array that passes the test. It is very siimilar to find().
+
+          // you can only give function as a parameter in find() and findIndex().
+
+          var age1 = [ 10, 23, 19, 20];
+          document.write(age1 + "<br>");
+
+          function checkAge(ag){
+            return ag >= 18;
+          }
+
+          // const checkAge = (ag) => {   **arrow function**
+          //   return ag >= 18;
+          // }
+
+          var a = age1.find(checkAge);
+          document.write(a);
+          
+
+          document.write("<br>");
+          document.write("<br>");
+
+          var age1 = [ 10, 23, 19, 20];
+          document.write(age1 + "<br>");
+
+          function checkAge(ag){
+            return ag >= 18;
+          }
+
+          var a = age1.findIndex(checkAge);
+          document.write(a);
+ 
+          document.write("<br><br>");
+
+
+
+
+          //Filter -> filter(Function Name)
+          //filter() method creates an array filled with all the array elements that passes the test specified.
+
+          var age2 = [10, 23, 9, 20];
+          document.write(age2);
+          document.write("<br><br>");
+
+
+          const checkAge1 = (agg) => {
+            return agg >= 18 ;
+          }
+
+          var a = age2.filter(checkAge1);
+          document.write(a);
+
+
+          document.write("<br><br>");
+
+
+          //Array Methods: toString() , valueOf(), fill()
+
+
+          // toString() -> Converts an existing array in strings and returns the result.
+
+          var a = ["Sanjay", "Aman", "Rehman", "Karan", "Aman"];
+
+          a.toString();
+          document.write(a);
+
+          document.write("<br><br>");
+          
+          //valueOf() -> returns the value of the array.
+
+          //fill() -> The fill function fills all the elements in array with a static value. this isnt used very ofently.
+
+          var a = ["Sanjay", "Aman", "Rehman", "Karan", "Aman"];
+          a.fill("Ram");
+          document.write(a);
+
+          document.write("<br><br>");
+
+
+          //forEach() -> its a type of loop to print all the items of an array.
+          
+          var a = ["Sanjay", "Aman", "Rehman", "Karan", "Aman"];
+
+          a.forEach(element => {
+            document.write(element + "<br>")
+          });
+
+
+          document.write("<br><br>");
+
+
+          // different way of writing
+
+          a.forEach(function(element, index){
+            document.write(index + " : " + element + "<br>");
+          })
+
+          document.write("<br><br>");
+
+          // different way of writing
+
+
+          a.forEach(loop);
+
+          function loop(element, index){
+            document.write(index + " : " + element + "<br>");
+          }
+
+
+          document.write("<br><br>");
+          document.write("<br><br>");
+
+
+
+
+          // **OBJECTS**
+          // **OBJECTS**
+          // **OBJECTS**
+          // **OBJECTS**
+
+          // Object is an advance version of Arrays. 
+          // {} for objects.
+          // Every index has a name unlike arrays which just numbers starting from 0,1,2....
+
+
+
+          var a = {
+            fname: "Harshit",
+            lname: "Yati",
+            age: 23,
+            email: "harshityati63@gmail.com",
+            favAnime: ["One Piece", "Attack On Titan", "Jujutsu Kaisen"],
+            living : {
+              "city" : "Varanasi",
+              "Country" : "India"
+            },
+            salary: function(){
+              return 25000;
+            },
+            fullname: function(){
+              return this.fname + " " + this.lname;
+            },
+          }
+
+          //salary and fullname here are methods. These are like function but they are inside the object a.
+          //You can also create an object inside an object.
+
+          document.write(a);
+          
+          document.write("<br>");
+
+          document.write(a.fname + "<br>");
+          document.write(a.favAnime + "<br>");
+          document.write(a.salary() + "<br>"); 
+          document.write(a.living.city + "<br>" + "<br>");   // prints object inside an object.
+                 
+
+
+          console.log(a);
+          console.log(a.fname);
+
+
+          // Another way of writing and creating Objects. -> Not defining the values at the time of creation of the object.
+          // Putting the values as we move along with the objects and not in the initialization itself.
+
+          var person = new Object();
+
+          person.firstName = "Ram";
+          person.lastName = "Charan";
+
+          document.write(person.firstName + "<br>");
+          document.write(person.lastName + "<br>");
+          //OR another way of writing
+          document.write(person['firstName'] + "<br>");
+
+          console.log(person.firstName);
+
+
+
+
+          //Array Of OBJECTS
+
+
+
+          var student = [
+            { name: "Harshit", age: 24 },
+            { name: "Shresth", age: 19 },
+            { name: "Davishman", age: 23 }
+          ];
+
+          document.write(student + "<br><br>");
+          console.log(student);
+
+          // printing this array in loop ->
+
+          for(var a = 0; a<student.length; a++){
+            document.write(student[a].name + " ");
+            document.write(student[a].age + "<br>" + "<br> ");
+          }
+
+          //to print an object in webpage from an object we must use its property to target the value. (student.name)
+
+
+
+
+          //FOR/IN LOOP ->  used specifically to print objects.
+
+          var guy = {
+            firstName: "Harshit",
+            lastName: "Yati",
+            age: 23,
+            email: "harshityati@gmail.com"
+          };
+
+          for(var key in guy){
+            document.write(key + " : " + guy[key] + "<br>");
+          }
+
+          document.write("<br>");
+          document.write("<br>");
+          document.write("<br>");
+
+
+         
+          //practice example
+
+          var exa = [10,3,24,11];
+
+          for(var a = 0; a < exa.length; a++){
+           var b = exa[a]*10;
+            document.write(b + "<br>");
+            console.log(b);
+          }
+
+
+          document.write("<br>");
+          document.write("<br>");
+          document.write("<br>");
+
+
+          //MAP FUNCTION IN ARRAYS -> creates a new array from an existing array with some changes that is specified by the coder.
+
+          var mapTest = [11,4,9,16];
+
+          document.write(mapTest + "<br>");
+
+          var b = mapTest.map(test);    //called the function named test.
+
+          function test(x){            //takes the value x from the array mapTest.
+            return x * 10;
+          }
+
+          document.write(b + "<br><br><br>");
+
+          //another example
+
+          var people = [
+            { name: "Harshit", age: 24 },
+            { name: "Shresth", age: 19 },
+            { name: "Davishman", age: 23 }
+          ];
+
+          var c = people.map(aTest);
+          document.write(c);
+
+          function aTest(x){
+            return x.name + " " + x.age
+          }
+
+
+
+
+          // when did u start jvascript?
+          // i came back here @18, then health issue till 25, then i started bootstrap revision, that took 4 days then created a project. @ 29 started revsiing js. Started js at 30. today is 6. ive spend around 5 proper days studying js. that guy has 3 weeks.
+
+
+          document.write("<br>");
+          document.write("<br>");
+          document.write("<br>");
+          document.write("Started STRINGS");
+
+          document.write("<br>");
+          document.write("<br>");
+
+
+
+          // **STRING METHODS IN JAVASCRIPT **IMPORTANT**
+
+          // 1. Length -> this property tells the length of a string just like in arrays. it also starts from 0.
+
+          var str = 'JavaScript is a great programming language';
+          var b = str.length;
+          document.write(b);
+
+          document.write("<br>");
+
+          //2. toLowerCase()/toUpperCase()
+
+          var c = str.toLowerCase();
+          document.write(c + "<br>");
+          var d = str.toUpperCase();
+          document.write(d + "<br>");
+
+          //3. includes() -> used to seacrh if a string is present in the given string. CASE Sensitive.
+
+          var che = "is this showing in the string includes";
+          var x = che.includes("the",7);
+
+          document.write(x + "<br><br>");
+          
+
+
+
+          // 4. startsWith() / endsWith()
+
+          var che = "is this showing in the string includes";
+          var x = che.startsWith("is");
+          document.write(x + "<br>");
+          var x = che.endsWith("string");
+          document.write(x + "<br><br>");
+
+          // 5. search() -> 
+          
+          // search also works like includes() but it does not return true or false. It returns the position of the value in the string. If it doesnt find anything in the string, it returns -1.
+
+
+          var str = 'JavaScript is a great programming language';
+          var x = str.search('great');
+          document.write(x + "<br><br>");   // returns 16, as we can see 16 is the position where it is located in the string. 
+
+
+
+          // 5. match() ->
+          // match is also like search, but it will not return the position of the item, instead it will seacrh and find the word again and again and will make an ARRAY out of. Combines all the search and makes an array of it.
+          
+          var str = "Javascript is the greatest programming language there is ."
+          var x = str.match(/is/g);  //write the string that u want to find and place it between / / and write 'g' to search it globally in the string.
+          document.write(x + "<br><br>");
+
+
+          // 6. indexOf & lastIndexOf ->
+          // indexOf returns the index of the first value it founds that matches with it.
+
+          var str = "Javascript is the greatest programming language there is ."
+
+          var x = str.indexOf("is");
+          document.write(x + "<br>");  //returns 11 of the first is which is 11.
+
+          // lastIndexOf of works just opposite.It searches from the last place.
+
+          var x = str.lastIndexOf("is");
+          document.write(x + "<br>"); // returns 54 from the last index.
+
+
+          // 7. replace() -> 
+          // it replaces the word in string from the word that is given by the input.
+
+          var str = "JavaScript is the greatest programming language there is. JavaScript is him"
+
+          var x = str.replace(/JavaScript/g, "C++");
+          document.write(x +"<br><br>");   // globally replaced the string JavaScript with C++ in the entire global string.
+
+          
+
+          // 8. trim() ->
+          //removes the extra spaces from left and right. No parameters are used in this just write string.trim()
+          //It is mostly used in forms whe user accidently puts extra spaces while filling the form, so we trim it first and then proceed.
+
+
+          // 9. charAt() ->
+          // you define a position, and it returns whatever character is present at that place.
+
+
+          var str = "JavaScript is constantly evolving.";
+          var x = str.charAt(7);
+          document.write(x +"<br>");
+
+
+          // 10. charCodeAt() & fromCharCode() ->
+          //They are co-related with each other. You can give them scii code and they will return a character for it.
+
+          var str = "JavaScript is constantly evolving.";
+          var x = str.charCodeAt(1);
+          document.write(x + "<br>");  //prints 97 as its the scii code for small a.
+
+          var a = String.fromCharCode(7);
+          document.write(a +"<br><br>");  //returns the scii code of the number that we put in via our keyboard.
+
+
+          // 11. concat() -> 
+          //cocat code is used to add two or more strings together or merge two or more strings.
+
+          var str = "JavaScript is constantly evolving.";
+          var str2 = " Just Backwards."
+          var str3 = " Sorry,JK."
+
+          var x = str.concat(str2,str3);
+          document.write(x +"<br><br>");
+
+
+          // 12. split() ->
+          // it splits every character of a string into an array and returns that array. You have to put in a parameter to specify from which areas from the string you want to split it.
+
+
+          var str = "JavaScript is constantly evolving.";
+          var x = str.split(" ");
+          var y = str.split("a");
+          document.write(x + "<br>"); // returns an array of all the splitted strings.
+          document.write(y + "<br><br>"); // returns an array of all the splitted strings.
+
+          
+          // 13. repeat() ->
+          //repeat the string number of times as per the input. Number is passed as a parameter.
+
+          var str = "JavaScript is constantly evolving. ";
+          var x = str.repeat(4);
+          document.write(x + "<br><br>");  //string repeated 2 times.
+
+
+          // 14. slice() ->
+          // works like just the array's slice. Two parameters are given from where u want to start and where u wanna end it. It will return the characters that is specified between the start and end parameters. Pass 0 and it will return everything. -1 to start from the end.
+
+          var str = "JavaScript is constantly evolving.";
+          var x = str.slice(5,17);
+          document.write(x + "<br><br>"); // returns "cript is con" as the sliced value.
+
+
+          // 15. substr() and substring() ->
+          // substr almost works like slice() which returns the string that is specified between the parameters.
+
+          var str = "JavaScript is constantly evolving.";
+          var x = str.substr(3,5); // will return all the 5 characters that comes after 3rd. returns aScri.
+          document.write(x + "<br>");
+
+          var x = str.substring(3,5);
+          document.write(x);  // will return the all the character specified within the given parameters. Like substring/subset.
+
+
+          // 16. toString() ->
+          // toString converts any data type into a string.
+
+          var str = 180;
+          var x = str.toString();  //converts numeric data type into string.
+          document.write(x + "<br><br>");
+
+          // 17. valueOf() ->
+          // it is the default function of strings. It is not used that oftenly.
+
+
+
+          function line(){
+            return document.write("<br>");
+          }
+
+
+          // **NUMBER METHODS**
+          // **NUMBER METHODS**
+          // **NUMBER METHODS**
+          // **NUMBER METHODS**
+
+
+
+          // 1. Number()
+          // 2. parseInt()
+          // 3. parseFloat()
+          // 4. isFinite()
+          // 5. isInteger()
+          // 6. toFixed()
+          // 7. toPrecision()
+
+
+          //1. Number() -> it converts whatever value you give it into a number.
+
+          var a = "99";  // its a string
+          var num = Number(a);
+          document.write(num + 10 );   //109 addition happened.
+
+          line();
+
+          var a = true;  //boolean value
+          var x = Number(a);
+          document.write(x);
+
+          line();
+
+          // 2. parseInt() / parseFloat() ->
+          // parseInt converts decimal into integer parseFloats converts non-decimal into decimal.
+
+          var a = 10.99;
+          var x = parseInt(a);
+          document.write(x); //returns the value without .99
+
+          line();
+
+          var a = "50 years";
+          var x = parseInt(a);
+          document.write(x); //returns the 1st integer value that is 50. converts the string into number.
+          
+          line();
+
+          var a = "he was 50";
+          var x = parseInt(a);
+          document.write(x);  // returns NaN because it did not found a number in the start.
+
+          //parseFloat -> also returns decimal value or the number that comes after decimal.
+
+          line();
+
+          var a = "10.99";
+          var x = parseInt(a);  //returns 10
+          document.write(x);
+          line();
+          var y = parseFloat(a); // returns 10.99
+          document.write(y);
+          line(); //
+
+          //4 . isFinite() -> all the "is" type of function returns only two types of values that is true/false. it checks if the given number is finite or not. if it finite it returns the value true.
+
+          var a = 174829927687867868788;
+          var x = isFinite(a);
+          document.write(x); //returns true
+
+          line(); // adds a 
+
+
+
+          // 5. isInteger -> checks if a given input is integer or not. returns true or false.
+
+          var a = 10.22;   //float value
+          var x = Number.isInteger(a);
+          document.write(x);
+          line()
+
+          // 6. toFixed() -> fixes a value after decimal to a certain point.
+
+          var a = 7.77685678;
+          var x = a.toFixed(4);
+          document.write(x); //returns 7.7769
+          line()
+
+
+          // 7. toPrecision -> gives a roundabout value if the value is greater than 0.5 it returns the greater value and vice versa
+
+          var a = 5.678;
+          var x = a.toPrecision(2);  
+          document.write(x); //returns 5.7
+          line();
+
+          // example
+
+          function sumOf(a,b){
+            return a * b;
+          }
+          
+          sumOf(5,7);   // do it in console
+
+
+          function multiOf(n){
+          
+          }
+
+          // **MOST IMPORTANT**
+
+          // DOM
+          //DOCUMENT OBJECT MODEL [DOM]
+          // On a seperate folder -> from multiple sources.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+  <body>
+
+    <br>
+    <br>
+    
+    <br>
+    <br>
+
+    <img src="dom.png" alt="dom">
+    <br>
+    <button onclick="button()">Button 1</button>
+
+    <br>
+
+    <button onclick="button2()">Button 2</button>
+    <p ondblclick="button2()">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+
+    
+  </body>
+
+</html>

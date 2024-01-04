@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+  </head>
+  <body>
+    
+    <script>
+
+      // an objects group multiple objects together.
+
+      // const product ={
+      //   name: 'socks',       //name is a property, we can chage property, code on right is called value.
+      //   price: 1090
+      // };
+
+      // console.log(product);
+      // console.log(product.name);
+      // console.log(product.price);
+
+
+      // product.name = 'cotton socks';
+      // console.log(product);
+
+      // product.newProperty = true;
+      // console.log(product);
+
+      // delete product.newProperty;
+      // console.log(product);
+
+        const product2 = {
+          name: 'shirt',
+          ['delivery-time']: '1 day',
+          rating: {
+            stars: 4.5,
+            count: 87,
+          },
+
+          fun: function function1(){
+            console.log('function inside object');
+          }
+        };
+
+        console.log(product2);
+        console.log(product2.name);
+        console.log(product2['name']);
+        console.log(product2['delivery-time']);
+        console.log(product2.rating.stars);
+        console.log(product2.rating.count);
+        product2.fun();
+
+        //Bracket Notation = lets us use properties that dont work with dot notation.
+        // 'conent' => is string
+        // JSON = Javascript Object Notation.
+
+        // Converting Javascript object to JSON
+
+        console.log(JSON.stringify(product2));
+
+        //JSON does not support function.
+
+        // Now converting JSON to Javascript
+
+        const jsonString = JSON.stringify(product2);
+        console.log(JSON.parse(jsonString)); // back into js object.
+
+        // Variables are temporary. 
+        // if we refresh/close the page, all the variables will be deleted.
+
+        // hence we use the built-in object called local storage which stores the values more permanently.
+        //only stores string
+
+
+
+    </script>
+
+  </body>
+</html>

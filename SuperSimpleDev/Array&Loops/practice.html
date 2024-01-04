@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>arrays and Loops Practice</title>
+  </head>
+  <body></body>
+
+  <script>
+    // 11a.
+    const num = [10, 20, 30];
+
+    num.push(99);
+    console.log(num);
+
+    //11b.
+
+    getLastValue(num);
+
+    function getLastValue(array) {
+      const lastIndex = num.length - 1;
+      console.log(array[lastIndex]);
+    }
+
+    //11c.
+
+    function arraySwap(array) {
+      const lastIndex1 = array.length - 1;
+
+      const lastValue = array[lastIndex1];
+
+      const firstValue = array[0];
+
+      array[lastIndex1] = firstValue;
+
+      array[0] = lastValue;
+
+      return array;
+    }
+
+    console.log(arraySwap([21, 33, 44, 66, 77]));
+
+    //11d.
+
+    // for (let i = 0; i <= 5; i++) {
+    //   console.log(i * 2);
+    // }
+
+    //11e.
+
+    for (let i = 5; i >= 0; i--) {
+      console.log(i);
+    }
+
+    //11h. (Brilliant)
+
+    function doubleArray(array) {
+      const newArray = [];
+      for (let i = 0; i < array.length; i++) {
+        const val = array[i] + 1;
+        newArray.push(val);
+      }
+
+      return newArray;
+    }
+
+    const arr = [1, 2, 3];
+    const arr1 = [-2, -1, 0, 99];
+    console.log(doubleArray(arr));
+    console.log(doubleArray(arr1));
+
+    //11i. (Brilliant)
+
+    function addNum(array, num) {
+      const arrayNew = [];
+      for (let i = 0; i < array.length; i++) {
+        const numAdd = array[i] + num;
+        arrayNew.push(numAdd);
+      }
+
+      return arrayNew;
+    }
+
+    const arr2 = [1, 2, 3];
+    const arr3 = [-2, -1, 0, 99];
+
+    console.log(addNum(arr2, 2));
+    console.log(addNum(arr3, 2));
+
+    //11j. (Good)-> variations of this question may arise and solution can be optimzed according to that, like what if the arrays are of different length.
+
+    function addArrays(array1, array2) {
+      const freshArray = [];
+      for (let i = 0; i < array1.length; i++) {
+        const arrayAdd = array1[i] + array2[i];
+        freshArray.push(arrayAdd);
+      }
+
+      return freshArray;
+    }
+
+    const arr4 = [1, 1, 2];
+    const arr5 = [1, 1, 3];
+
+    console.log(addArrays(arr4, arr5));
+
+    //11k. (Good)
+
+    function countPositive(nums) {
+      let result = 0;
+      for (let i = 0; i < nums.length; i++) {
+        if (nums[i] > 0) {
+          result++;
+        }
+      }
+
+      return result;
+    }
+
+    const arr6 = [1, -3, 5];
+    const arr7 = [-2, 3, 5, 7, 10];
+    console.log(countPositive(arr6));
+    console.log(countPositive(arr7));
+
+    //11l. v.good
+
+    function minMax(nums) {
+      const result = {
+        min: nums[0], //understand this type of declaration
+        max: nums[0],
+      };
+
+      for (let i = 0; i < nums.length; i++) {
+        const value = nums[i];
+
+        if (value < result.min) {
+          result.min = value;
+        }
+
+        if (value > result.max) {
+          result.max = value;
+        }
+      }
+
+      return result;
+    }
+
+    const arr8 = [-2, 3, -5, 7, 10];
+
+    console.log(minMax(arr8));
+
+    //11o/p.
+
+    const stringArr = ["hello", "world", "search", "good"];
+
+    for (let i = 0; i < stringArr.length; i++) {
+      if (stringArr[i] === "search") {
+        console.log(i);
+        // break;
+      } else {
+        console.log(-1);
+      }
+    }
+
+    //11q. (good) -> see how to input the word in 2nd parameter.
+
+    function findIndex(array, word) {
+      for (let i = 0; i < array.length; i++) {
+        if (array[i] === word) {
+          return i;
+        } else {
+          return -1;
+        }
+      }
+    }
+
+    console.log(findIndex(["green", "red", "blue"], "red"));
+
+    //11r.  (Brilliant)
+
+    function removeEgg(foods) {
+      const result = [];
+      for (let i = 0; i < foods.length; i++) {
+        if (foods[i] === "egg") {
+          continue;
+        } else {
+          result.push(foods[i]);
+        }
+      }
+
+      return result;
+    }
+
+    const arr10 = ["egg", "apple", "egg", "egg", "ham"];
+
+    console.log(removeEgg(arr10));
+
+    //Do All The Other Exercise Of 11th Section.
+  </script>
+</html>

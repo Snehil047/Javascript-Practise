@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 3</title>
+  </head>
+  <body>
+    <input type="text" class="js-text-typed" onkeyup="typeSame()" />
+    <p class="js-text-down"></p>
+  </body>
+
+  <script>
+    function typeSame() {
+      const mainText = document.querySelector(".js-text-typed");
+      let inputWith = mainText.value;
+
+      document.querySelector(".js-text-down").innerHTML = `${inputWith}`;
+    }
+  </script>
+</html>

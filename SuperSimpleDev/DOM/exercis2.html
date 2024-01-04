@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input
+      type="text"
+      placeholder="name"
+      class="js-input-element"
+      onkeydown="handleCostKeydown(event)"
+    />
+    <button class="js-button-element" onclick="inputShows()">Submit</button>
+    <p class="js-display-element"></p>
+
+    <input
+      type="text"
+      placeholder="enter text here"
+      class="js-entered-text"
+      onkeydown="mountKey(event)"
+    />
+    <button onclick="mount()">Submit</button>
+    <p class="js-show-text"></p>
+  </body>
+
+  <script>
+    function inputShows() {
+      const main = document.querySelector(".js-input-element");
+      let inputVal = main.value;
+      console.log(inputVal);
+      document.querySelector(".js-display-element").innerHTML =
+        "Your Name is: " + `${inputVal}`;
+    }
+
+    function handleCostKeydown(event) {
+      if (event.key === "Enter") {
+        inputShows();
+      }
+    }
+
+    function mountKey(event) {
+      if (event.key === "Enter") {
+        mount();
+      }
+    }
+
+    function mount() {
+      const usBahi = document.querySelector(".js-entered-text");
+      let entrText = usBahi.value;
+
+      document.querySelector(".js-show-text").innerHTML =
+        "Your Entered text is: " + `${entrText}`;
+    }
+  </script>
+</html>

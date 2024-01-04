@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>objects practice</title>
+  </head>
+  <body>
+    practice questions
+
+    <button onclick="playGame('heads')">Heads</button>
+    <button onclick="playGame('tails')">tails</button>
+  </body>
+  <script>
+    // 8.a
+
+    const product = {
+      name: "basketball",
+      price: "2095 cents",
+    };
+
+    console.log(product);
+
+    // 8.d
+
+    function comparePrice(product1, product2) {
+      //parameters
+      if (product1.price < product2.price) {
+        return product1;
+      } else {
+        return product2;
+      }
+    }
+
+    const product11 = {
+      name: "Product1",
+      price: 2000,
+    };
+
+    const product22 = {
+      name: "Product2",
+      price: 1999,
+    };
+
+    console.log(comparePrice(product11, product22)); //passing the parameters
+
+    //8.i
+
+    let score = {
+      wins: 0,
+      losses: 0,
+    };
+
+    function playGame(guess) {
+      const randomNumber = Math.random();
+      const result = randomNumber < 0.5 ? "heads" : "tails";
+
+      console.log(guess === result ? "You win!" : "You lose!");
+
+      if (guess === result) {
+        score.wins = score.wins + 1;
+      } else {
+        score.losses = score.losses + 1;
+      }
+
+      console.log(score);
+    }
+  </script>
+</html>

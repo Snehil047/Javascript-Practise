@@ -1,0 +1,18 @@
+.subscribe-button {
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border-radius: 50px;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+}
+/* 
+.subscribe-button: {
+  background-color: wheat;
+} */
+
+.is-subscribed {
+  background-color: rgb(243, 230, 230);
+  color: black;
+}

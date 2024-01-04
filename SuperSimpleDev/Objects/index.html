@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+  </head>
+  <body>
+    <p>What is an onject?</p>
+    <p>An object groups multiple values together.</p>
+    <p>"name and price here are properties of the objects."</p>
+    <p>object is just another type of value</p>
+    <p>Inside an object we can save any type of values.</p>
+    <p>We can also add functions inside an object.</p>
+    <p>
+      <b>when we save functions inside an object, it is called a Method.</b>
+    </p>
+    <p>
+      <b
+        >JSON -> json stands for javascript object notation. it is a simplified
+        version of javascript object. But we use JSOn so that it is understood
+        by multiple languages.
+
+        <li>We use jason when we send data between computers</li>
+        <li>When we store data.</li>
+      </b>
+    </p>
+  </body>
+  <script>
+    const product = {
+      name: "socks",
+      price: "4090",
+    };
+
+    console.log(product);
+    console.log(product.name); //THESE ARE CALLED DOT NOTATION , accessing values through DOT NOTATION.
+    console.log(product.price);
+
+    // we can also change the values of the property ->
+
+    product.name = "rtx 4090";
+    console.log(product.name);
+
+    // inside objects { name: 'socks' is called property-value pair. we seperate property-value pair with a comma(,).}
+
+    // ADDING NEW VALUES TO OBJECTS ->
+
+    product.newPerformance = "34006 peak score"; // new property called newPerfomance is added into the object name product.
+    console.log(product);
+    console.log(product.newPerformance);
+
+    // DELETING VALUES FROM AN OBJECT
+
+    delete product.newPerformace;
+    console.log(product); // propert named newPerformace is deleted from the object product.
+
+    // NEW CONCEPTS AND EXAMPLES REGARDING OBJECTS
+
+    const product2 = {
+      name: "shirt",
+      ["delivery-time"]: "1 day", //added through bracket notation.
+      rating: {
+        //object inside an object called NESTED OBJECT
+        stars: 4.7,
+        count: 87,
+      },
+      fun: function function1() {
+        console.log("function inside an object");
+      },
+    };
+
+    console.log(product2);
+    console.log(product2.name);
+    //NEW WAY OF ADDING PROPERTY-VALUE PAIR INSIDE OBJECTS
+    //**BRACKET NOTATION** -> get the value associated with the property.
+    console.log(product2["name"]);
+
+    // There are some properties that dont work with dot notation. There we use the Bracket Notation.
+    // console.log(product2.delivery - time); -> this gives an error as javascript misinterpret the dash(-) as minus sign. But with Bracket Notation we can do that easliy.
+
+    console.log(product2["delivery-time"]);
+
+    // also we dont have to use string all the time, we can use variables and perform operations like additions, substractions etc.
+    // We use dot notations as default and due it being more clean, but for properties that dont work, we use bracket notations.
+
+    // NESTED OBJECTS
+    //  to access nested objects we use the dot notation multiple times . Functions are also values and hence they can be stored inside an object.
+
+    console.log(product2.rating.stars);
+    product2.fun(); // runs the function inside the object.
+
+    // TO CONVERT JS OBJECT INTO JSON
+
+    console.log(JSON.stringify(product2)); // dislplays the object in json format. JSON does not supports functions.
+
+    // TO CONVERT JSON INTO JAVASCRIPT
+
+    console.log(JSON.stringify(product2));
+    const jsonString = JSON.stringify(product2);
+    JSON.parse(jsonString);
+    console.log(JSON.parse(jsonString)); //converted in javascript object.
+
+    // LOCAL-STORAGE -> another built in object. It store values more permanently. for e.g. when we create a var in rock paper scissors, when we refresh the page, all the variable values are lost. But if we use localstorage the values will still be there after we refresh the page.
+
+    // setting a value in localstorage
+    localStorage.setItem("message", "value stores : Hello");
+    // here message is var name, hello is the value stored inside it.
+
+    //getting a value out of localstorage.
+    localStorage.getItem("message");
+    console.log(localStorage.getItem("message")); // displays the value of property message -> value stores : Hello
+
+    // AUTO BOXING
+    console.log("hellow".length);
+    console.log("hellow".toUpperCase());
+    //simple values as strings can also have properties and methods.
+
+    //IMPORTANT ->  Objects are referneces.
+
+    const object1 = {
+      // the value isnt stored inside the variable named object1, instead object1 is just a refernece of the values. The values inside the object is stored somewhere in the computer memory, object1 variable is just a refrence to it.
+      message: "hello",
+    };
+
+    const object2 = object1;
+    console.log(object2);
+
+    // now then, we now when we create a variable with const, w cannot change its value later, but with object refrences, we can, as its just a refrence.
+
+    object1.message = "Good Job Mate!!"; //even with const, we can change the value inside the objects.
+    console.log(object1.message);
+
+    console.log(object2); // value cahnged for object2 also.
+
+    //IMPORTANT: We cannot compare objects directly.
+
+    const object3 = {
+      message: "Good Job Mate!!",
+    };
+
+    console.log(object3 === object1); //false
+    console.log(object2 === object1); // true -> because object2 has the same refrence to object1 thats why it is true. Both objects have the same refrence.
+
+    // WE ARE COMPARING THE REFRENCES NOT THE VALUES INSIDE
+
+    // Some Shortcuts for Objects
+
+    const object4 = {
+      message: "Good job!",
+      price: 799,
+    };
+    // const message = object4.message;
+    const { message, price } = object4; // this is called desructuring, both the codes above means the same thing. When the varaible name and the property inside is the same. This is called Destructuring. We took message out of the Object4
+
+    // This above line of code took message property out of the object and saved it in a variable called message. (the same name.)
+
+    console.log(message); //came out of object and got saved in a variable.
+    console.log(price); // same as above
+
+    // SHORTHAND PROPERTY & Shorthand Method->
+
+    const object5 = {
+      message: message, // the value saved inside message variable (yellow), it takes whatever is inside the message variable and substitutes it in the code (message-yellow)
+      message, // works same as the above line of code
+
+      method: function function2() {
+        console.log("method");
+      },
+
+      method() {
+        console.log("method"); // this line of code and the above code works the same way, method() creates a function without needing to write the function function 1() {}
+      },
+    };
+
+    console.log(object5); //
+    object5.method();
+  </script>
+</html>

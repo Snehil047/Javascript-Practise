@@ -1,0 +1,19 @@
+.about{
+  background-color: grey;
+  width: 200px;
+  height: 150px;
+}
+
+.multi-images{
+  display: flex;
+  gap: 20px;
+}
+
+#spidermon{
+  display: none;
+}
+
+.green{
+  color: green;
+  text-decoration: underline palevioletred wavy;
+}

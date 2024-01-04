@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>HTML CSS JS Together</title>
+  </head>
+  <body>
+    <p>Youtube Subscribe Button</p>
+    <button class="js-subscribe-button subscribe-button" onclick="subscribe()">
+      Subscribe
+    </button>
+    <br />
+    <br />
+
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping</p>
+    <p>Orders over $40 = Free shipping</p>
+
+    <input type="text" class="js-input" onkeypress="keyEnt(event)" />
+    <button class="js-button calculate-button" onclick="clickClack()">
+      Calculate
+    </button>
+    <p class="js-output"></p>
+  </body>
+
+  <script>
+    function clickClack() {
+      const main = document.querySelector(".js-input");
+
+      var x = Number(main.value);
+
+      if (x < 40) {
+        x = x + 10;
+      } else {
+        return x;
+      }
+
+      document.querySelector(
+        ".js-output"
+      ).innerHTML = `Your Final Price is: ${x}`;
+    }
+
+    function keyEnt(event) {
+      if (event.key === "Enter") {
+        clickClack();
+      }
+    }
+
+    // Desinging subscribe button using CSS
+
+    // classList -> gives us control over the class attribute.
+    // typing a dot only makes sense in queryselector class
+
+    function subscribe() {
+      const buttonElement = document.querySelector(".js-subscribe-button");
+
+      if (buttonElement.innerText === "Subscribe") {
+        buttonElement.innerHTML = "Subscribed";
+        buttonElement.classList.add("is-subscribed");
+      } else {
+        buttonElement.innerHTML = "Subscribe";
+        buttonElement.classList.remove("is-subscribed");
+      }
+    }
+  </script>
+</html>

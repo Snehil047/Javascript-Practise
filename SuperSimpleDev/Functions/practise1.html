@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiply function</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <p>This button multiplies the input number by 10</p>
+    <input type="text" class="js-number" />
+    <button class="js-calculate" onclick="cat()">Calculate</button>
+    <p class="show-percentage"></p>
+  </body>
+
+  <script>
+    function cat() {
+      const num1 = document.querySelector(".js-number");
+      let a = num1.value;
+      document.querySelector(".show-percentage").innerHTML = `${a * 10}`;
+    }
+    // function calTax(i) {
+    //   const enterNum = document.querySelector(".js-number");
+    //   let i = enterNum.value;
+
+    //   let x = i * 0.1;
+    //   document.querySelector(".show-percentage").innerHTML = `${x}`;
+    // }
+
+    // function calTax() {
+    //   const enterNum = document.querySelector(".js-number");
+    //   let x = enterNum.value;
+
+    //   calculateTax(x);
+
+    //   document.querySelector(".show-percantage").innerHTML = `${y}`;
+    // }
+
+    // var y;
+    // function calculateTax() {
+    //   y = x * 0.1;
+    //   document.querySelector(".show-percantage").innerHTML = `${y}`;
+    // }
+    // function calculateTax(parameter1) {
+    //   console.log(parameter1 * 0.1);
+    // }
+
+    function updateCartQuantity() {
+      let cartQuaantity = 1;
+      cartQuaantity = cartQuaantity + updateCartQuantity;
+      console.log(cartQuaantity);
+      document.querySelector(
+        ".js-cart-quantity"
+      ).innerHTML = ` ${cartQuaantity}`;
+    }
+
+    updateCartQuantity(2);
+  </script>
+</html>

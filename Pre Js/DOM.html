@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dom</title>
+</head>
+<body>
+  
+
+  <button>Hello</button>
+
+  <script>
+
+    /*
+
+    //DOM= document object Model, another built-in object.
+    // The document object represents/models the webpage.
+
+    // document.body.innerHTML = 'hello';
+    // document.title ='Good Job!';
+
+    console.log(document.title);
+    document.title = 'changed';
+
+    //DOM combines HTML and Javascript together.
+
+    console.log(document.body);  // shows the entire body of html, here html is used under js.
+    console.log(typeof document.body);   //object, html is treated as js object.
+
+    //innerHTML gives us all the html inside body
+
+    console.log(document.body.innerHTML);
+    document.body.innerHTML = 'changed';  // it will change the entire body of html, you can see it in section elemnts in dev tools.
+
+    //innerHTML gives us control of all the html inside of the body.
+
+    document.body.innerHTML =' <button>Good Job Mate</button>';
+
+
+    // METHOD = A function saved inside an object.
+
+    // MOST IMPORTANT
+
+    // document.querySelector() = lets us get any element from the page and put it inside Javascript.
+
+    */
+
+    console.log(document.querySelector('button'));  // selects the first button from html
+
+    console.log(document.querySelector('button').innerHTML); // gives the written html value.
+
+    document.querySelector('button').innerHTML = 'changed';   //changed the button name
+
+
+
+
+  </script>
+</body>
+</html>

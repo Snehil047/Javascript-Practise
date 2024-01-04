@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Functions</title>
+  </head>
+  <body>
+    <button onclick="" class="js-button">Click</button>
+  </body>
+  <script>
+    // FUNCTION ->
+
+    // Function are values.
+    // We can save a function inside a variable. Just like we can save several other values inside variables.
+
+    const num = 2;
+    const function1 = function () {
+      console.log("hello");
+    };
+
+    console.log(function1);
+    console.log(typeof function1);
+
+    function1(); //calling the function -> You can just call the variable and it will run the function because the variable has the function stored inside it.
+
+    // In JavaScript, as long as there is a way to access a function, we do not need the function name to use/ call it.
+
+    // And we can just delete the function name  from the above example.
+
+    //ANONYMOUS FUNCTION -> A FUNCTION WITHOUT A NAME.
+
+    const function2 = function () {
+      console.log("hello2");
+    };
+
+    console.log(function2);
+
+    function2();
+
+    // as you can see from the above example, we daclared a function through a variable witout the functio name. ABOVE IS THE EXAMPLE OF AN ANONYMOUS FUNCTION.
+
+    //** IMPORTANT NOTE**
+
+    // THE more traditional method of declaring a function is more popular and used as it has major benefits.
+
+    // ADVANTAGE 1. -> Easier to read.
+
+    // * HOISTING -> WE CAN CALL THIS FUNCTION, BEFORE WE CREATE THIS IN CODE. WE DON'T HAVE TO WORRY ABOUT THE ORDER OF THE CODE. Hoisting doesn't work when we declare functions using Variables.
+
+    greetMe();
+
+    function greetMe() {
+      console.log("Oonga Boonga");
+    }
+
+    // SAVING FUNCTIONS INSIDE AN OBJECT ->
+
+    // As we know function are values, hence we can save them inside objects.
+
+    //METHOD -> WHEN A FUNCTION IS SAVED INSIDE AN OBJECT
+
+    const object1 = {
+      num: 2,
+      fun: function () {
+        console.log("Hello3");
+      },
+    };
+
+    object1.fun(); // ALSO we dont need the function name, hence it can be an anonymous function.
+
+    // PASSING A VALUE IF FUNCTION -> Parameters
+
+    function display(param) {
+      console.log(param);
+    }
+
+    display(2);
+
+    // WE CAN ALSO PASS A FUNCTION INTO A FUNCTION ->
+    //param is a parameter, that is passed in run function. we gave function as a parameter to the function run. This is called passing a function into another function.
+
+    //  THIS IS CALLED CALLBACK -> Callback function. Passing a function as parameter to another function.
+
+    function run(param) {
+      param();
+    }
+
+    run(function () {
+      console.log("Hello4");
+    });
+
+    // IMPORTANT FUNCTIONS ->
+
+    //
+    //
+    //
+    //
+    //
+    //
+
+    //SETTIMEOUT
+    //SETTIMEOUT
+    //SETTIMEOUT
+    //SETTIMEOUT
+    //SETTIMEOUT
+    //SETTIMEOUT
+    //SETTIMEOUT
+
+    // setTimeout() -> allows us to run a function in the future. We give it a function, and it will call this function after a certain amount of time depending upon the 2nd parameter. The setTimeout() doesnt wait for the 3 seconds to be over, it just sets up the timer and goes to the next line.
+
+    // setTimeout function takes two parameters inside these brackets.
+
+    // 1st Parameter -> A function that we want to run in future
+    // 2nd Parameter -> How long to wait before running this function. in millisecond (ms). 1000ms = 1 second.
+
+    // ASYNCHRONOUS CODE -> V. Important.
+
+    setTimeout(function () {
+      console.log("TimeOut"); //appears in console 3 seconds later.
+      console.log("timeOut2");
+    }, 3000);
+
+    console.log("next-line"); // this is displayed before the setTimeout function.
+
+    // The setTimeout() doesnt wait for the 3 seconds to be over, it just sets up the timer and goes to the next line.
+
+    // The above is called Asynchronous Code whic means -> it won't wait for a line to finish before going to the next line. It will setup a timer and immediately goes to the next line. The code inside the function will still run line by line (in synchronous form). It does not block our code for 3 seconds, it just sets up a timer in the background and then goes to the next line of code. This allows our code todo other things while the timer runs in the background.
+
+    // SYNCHRONOUS CODE ->
+
+    // It will wait for one line to finish before going to the next line.
+
+    //SETINTERVAL
+    //SETINTERVAL
+    //SETINTERVAL
+    //SETINTERVAL
+    //SETINTERVAL
+    //SETINTERVAL
+
+    //Another Built in function ->
+
+    // setInterval -> It takes the same two parameters as the setTimeout. 1st one is a function that we want to run in future. 2nd one is A number in millisecond.
+
+    const intervalId = setInterval(function () {
+      console.log("interval");
+    }, 3000);
+
+    // setInterval will run the function 3 seconds in the future, but the diffrence is that  IT WILL KEEP RUNNING THE FUNCTION EVERY 3 SECONDS.
+
+    console.log("next line2");
+
+    // setInterval is also asynchronous.
+
+    // setInterval always gives different id everytime this function runs. To stop setInteval, we can use a function called clearInterval.
+
+    clearInterval(intervalId); // now it doesnt run
+
+    //
+    //
+    //
+    //
+    //
+    //
+
+    // Another Way to Loop Through an Arrays ->
+
+    // previously we learned to loop through an array using for loop, but there's an another method forEach()
+
+    // forEach()
+    // forEach()
+    // forEach()
+    // forEach()
+
+    ["make dinner", "wash dishes", "watch youtube"].forEach(function (
+      value,
+      index
+    ) {
+      // it will loop through an array , for each of the values in the array, it will save the value in the parameter and run the function. forEach() doesnt have a continue property, instead we can use return.
+
+      if (value === "wash dishes") {
+        return; // return is equivalent of continue in forEach, hence wash dishes is not printed in console.
+      }
+      console.log(index);
+      console.log(value);
+    });
+
+    // forEach() method is actually preferred way to loop through an array.
+
+    //example ->
+
+    //here todoList is an array.
+
+    // todoList.forEach(function (object, index) {}); // rest all things will work inside function as usual.
+
+    //
+    //
+    //
+    // forEach() -> method used to iterate over the elements of an array and apply an specified function (callback) to each element.
+
+    // array.forEach(callback)
+    // element, index, and array are provided
+
+    let numbers = [1, 2, 3, 4, 5];
+
+    function display(element) {
+      console.log(element);
+    }
+
+    numbers.forEach(display);
+
+    function double(element) {
+      console.log(element * 2);
+    }
+
+    // there is also an other way of defining it ->
+
+    function double1(element, index, array) {
+      // works as the same way as the above function.
+      array[index] = element * 2;
+      console.log(array[index]);
+    }
+
+    numbers.forEach(double);
+
+    numbers.forEach(double1);
+
+    function square(element, index, array) {
+      array[index] = element * element;
+      console.log(array[index]);
+    }
+
+    numbers.forEach(square);
+
+    //
+    //
+    //
+    //
+    //
+
+    // ARROW FUNCTIONS -> An arrow function works as the same way as a regular function, more or less.
+
+    const regularFunction = function (param, param2) {
+      console.log("hello1");
+    };
+
+    const arrowFunction = (param, param2) => {
+      console.log("hello");
+    };
+
+    arrowFunction();
+
+    // Diffrences between arrow function and regular functions ->
+    // Arrow functions have some shortcuts ->
+
+    //if we are passing  a single parameter, the () are optional. The prettier extension wont let me, but it can be done.
+
+    const oneParam = (param) => {
+      console.log(param + 1);
+    };
+
+    oneParam(2); // 3
+
+    //2nd Shortcut -> If an arrow function is of one line, the {} are optional, we cam also remove the return statement.
+
+    const oneLine = () => 2 + 3; // one line arrow function.
+    console.log(oneLine());
+    //
+    //
+    //
+    //
+
+    // IMPORTANT NOTE -> When we are passing a function
+
+    ["make breakfast", "wash dishes", "watch youtube"].forEach(
+      (value, index) => {
+        if (value === "watch youtube") {
+          return; // equivalent to continue, meaning skip
+        }
+        console.log(index);
+        console.log(value);
+      }
+    );
+
+    //arrow functions are not hoisted, i shall not use them in any circumstances. Same goes for forEach() loop, its easier for me to use normal for loop, i have to get used to forEach loops better.
+
+    //
+    //
+    //
+    //
+    //
+
+    // addEventListner -> this is very similar to onclick attribute in html.
+
+    // addEventListner() lets us run some code when we interact with the element.
+
+    // It takes two parameters, ->
+    // 1st Parameter is -> event. Event can be taken from onclick in html, after on'event', we can define the event. The after 'on' is the event.
+    //2nd Parameter is -> a function that we want to run
+
+    //for e.g.
+
+    const buttonElement = document.querySelector(".js-button");
+
+    const eventlistner = () => {
+      console.log("clickk");
+    };
+
+    buttonElement.addEventListener("click", eventlistner);
+
+    buttonElement.removeEventListener("click", eventlistner);
+
+    buttonElement.addEventListener("click", () => {
+      console.log("clickk2");
+    });
+
+    // The above code does the same thing as Onclick attribute, but addEventListner have some advantages over Onclick ->
+
+    //1. Multiple event listners for an event
+    //2. Also we can remove an eventlistner by using removeEventListner(), it also takes two parameter,
+
+    // 1st. the event we want to remove
+    // 2nd. The function we want to remove, The better thing to is save the function inside a variable .
+
+    // A Very common mistake is to add or pass actual function in addEventListner, it wont work if you pass actual bare function in addEventListner.
+
+    // The way to do it by creating another function in addEventListner and then pass the function inside it.
+
+    document.querySelector(".js-button").addEventListener("click", () => {
+      playGame("rock");
+    });
+
+    // this is the correct way to pass a function in eventlistner.
+
+    //
+    //
+    //
+
+    // adding eventlistner to body on event keydown, to show which button is pressed.
+
+    document.body.addEventListener("keydown", (event) => {
+      console.log(event);
+    });
+
+    // another eventlistner
+
+    document.body.addEventListener("keydown", (event) => {
+      if (event.key === "r") {
+        console.log("pressed key is r");
+      } else if (event.key === "s") {
+        console.log("pressed key is s");
+      }
+    });
+
+    // also important thing to note is that query selector only selects 1st element from html, if you want to select all the elements that have same class names, use querySelectorAll
+
+    document.querySelectorAll(".js-button").forEach((value, index) => {
+      value.addEventListener("click", () => {
+        //code or function here
+      }); //for arrays
+    });
+
+    //
+    //
+    //
+    //
+    //
+
+    // More Features, that uses function as values ->
+
+    // .filter() -> filter just works as for each, we have to give it a function, and it has two parameters.
+
+    // filter creates a new array, return true, => put value in array, return false, not put value in array.
+
+    console.log(
+      [1, -3, 5].filter((value, index) => {
+        if (value >= 0) {
+          return true;
+        } else {
+          return false;
+        }
+      })
+    );
+
+    //
+    //
+    //
+    //
+
+    // .map() ->  just works as forEach and filter,
+
+    // .map() creates a new  array [], whatever we return => gets added to a new array.
+
+    // map() will transform an array into another array.
+
+    // in this example double the each value of array.
+
+    console.log(
+      [1, 1, 3].map((value, index) => {
+        return value * 2;
+      })
+    );
+
+    //
+    //
+    //
+    //
+    //
+
+    // Closure => If a function has an access to a value, it will always have access to that value. Value gets pacakged together (enclosed) with the function.
+  </script>
+</html>

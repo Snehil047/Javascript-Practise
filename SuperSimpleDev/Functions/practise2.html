@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Cart Quantity</title>
+  </head>
+  <body>
+    <button
+      onclick="
+      // Display the cart quantity on the page
+      // instead of in the console.
+      displayCartQuantity();
+    "
+    >
+      Show Quantity
+    </button>
+
+    <button
+      onclick="
+      updateCartQuantity(1);
+    "
+    >
+      Add to Cart
+    </button>
+
+    <button
+      onclick="
+      updateCartQuantity(2);
+    "
+    >
+      +2
+    </button>
+
+    <button
+      onclick="
+      updateCartQuantity(3);
+    "
+    >
+      +3
+    </button>
+
+    <button
+      onclick="
+      updateCartQuantity(4);
+    "
+    >
+      +4
+    </button>
+
+    <button
+      onclick="
+      updateCartQuantity(5);
+    "
+    >
+      +5
+    </button>
+
+    <button
+      onclick="
+      updateCartQuantity(-1);
+    "
+    >
+      Remove from cart
+    </button>
+
+    <button
+      onclick="
+      updateCartQuantity(-2);
+    "
+    >
+      -2
+    </button>
+
+    <button
+      onclick="
+      updateCartQuantity(-3);
+    "
+    >
+      -3
+    </button>
+
+    <!-- <button
+      onclick="
+      cartQuantity = 0;
+      console.log('Cart was reset.');
+
+      // Display the cart quantity after updating.
+      displayCartQuantity();
+    "
+    >
+      Reset Cart
+    </button> -->
+
+    <!-- Create an element to display the cart quantity. -->
+    <p class="js-cart-quantity"></p>
+  </body>
+  <script>
+    let cartQuaantity = 0;
+
+    function updateCartQuantity(amount) {
+      cartQuaantity = cartQuaantity + amount;
+      console.log(cartQuaantity);
+      document.querySelector(
+        ".js-cart-quantity"
+      ).innerHTML = ` ${cartQuaantity}`;
+    }
+
+    // amount here is the input or parameter that will be given to the function when the button with specific parameter is pressed, so instead of the whole function name [updateCartQuaantity()], we will update the  parameter of the function.
+
+    updateCartQuantity(2);
+  </script>
+</html>

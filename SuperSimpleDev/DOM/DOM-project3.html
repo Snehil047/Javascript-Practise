@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Amazon Calculator</title>
+  </head>
+
+  <body>
+    <p>Amazon Shipping Calculator</p>
+
+    <p>Orders under $40 = +$10 shipping</p>
+    <p>Orders over $40 = Free shipping</p>
+
+    <input
+      type="number"
+      placeholder="Cost of order"
+      class="js-cost-input"
+      onkeydown="handleCostKeydown(event)"
+    />
+    <button onclick="calculateTotal()">Calculate</button>
+
+    <p class="js-total-cost"></p>
+
+    <!-- <form action="#">
+    <input type="text" placeholder="Cost Of Order">
+    <button onclick="">Calculate</button>
+  </form>
+   -->
+  </body>
+
+  <script>
+    function handleCostKeydown(event) {
+      if (event.key === "Enter") {
+        calculateTotal();
+      }
+    }
+
+    function calculateTotal() {
+      const inputElement = document.querySelector(".js-cost-input");
+
+      let cost = Number(inputElement.value); // gets the value inisde input of feild. .innerHTML wont work here.
+      console.log(cost);
+      //IMPORTANT NOTE -> whenever we take value from DOM it always takes it in form of string, we have to manually convert it into number using Number() function.
+
+      //Built in string function String(number) coverts anything into a string.
+
+      //EVENTS & EVENT Listeners
+
+      //clicks, keydowns = events
+      // onclick, onkeydown=> event Listners
+
+      console.log(typeof cost);
+
+      if (cost < 40) {
+        cost = cost + 10;
+      }
+      document.querySelector(".js-total-cost").innerHTML = `$${cost}`;
+    }
+
+    // console.log(calculateElement(37));
+    // function calculateElement(i){
+
+    //   if(i < 40 ){
+    //     return i = i + 10;
+    //   }else{
+    //     return i;
+    //   }
+    // }
+  </script>
+</html>
