@@ -142,3 +142,17 @@ getData3()
   .catch((error) => {
     console.log(error);
   });
+getData3()
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
+getData3()
+  .then((result) => {
+    console.log(result);
+  })
+  .catch((error) => {
+    console.log(error);
+  });
