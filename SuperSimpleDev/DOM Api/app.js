@@ -65,14 +65,23 @@ form.appendChild(button2);
 const list = document.createElement("ul");
 document.body.appendChild(list);
 
+const removeElement = (el) => {
+  el.remove();
+};
+
 form.onsubmit = (event) => {
   event.preventDefault(); // it is neccessery because forms by default redirect u to another page.
   const li = document.createElement("li");
   list.appendChild(li);
   li.innerText = input1.value;
+  li.onclick = removeElement.bind(null, li);
   input1.value = "";
 };
 
 // done.
 
-//  Now we'll add (remove todo) button to remove todo.
+//  Now we'll add (remove todo) button to remove todo. (in above code, added)
+
+const newButton = document.createElement("button");
+newButton.innerText = "Delete";
+form.appendChild(newButton); //delete button doesn't work, fix later.
